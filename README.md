@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Autonomous Fleet Telemetry & Predictive Maintenance Hub
 
 An end-to-end telemetry monitoring and predictive maintenance analytics dashboard built on the NASA C-MAPSS (Commercial Modular Aero-Propulsion System Simulation) turbofan engine dataset.
@@ -94,3 +95,18 @@ Focus: Data Analytics | Machine Learning Engineering | Predictive Maintenance
 GitHub: GitHub Profile
 
 LinkedIn: LinkedIn Profile
+=======
+Autonomous Fleet Telemetry & Predictive Maintenance HubAn end-to-end telemetry monitoring and predictive maintenance analytics dashboard built on the NASA C-MAPSS (Commercial Modular Aero-Propulsion System Simulation) turbofan engine dataset.This platform processes streaming operational sensor metrics to calculate Remaining Useful Life (RUL) and detect multivariate time-series anomalies, enabling proactive maintenance scheduling and reducing catastrophic fleet failures.🎯 Executive Summary & Business ImpactProblem Statement: Unscheduled maintenance and unexpected equipment failure in fleet assets result in severe downtime costs and logistical bottlenecks. Traditional threshold alerts often fire too late or produce high false-positive rates.Solution: Implemented a dynamic telemetry pipeline using rolling statistical baselines and dynamic Z-score thresholds to flag sensor degradation profiles prior to critical system failure.Key Metrics & Outcomes:30-Cycle Early Warning Window: Categorizes asset health into CRITICAL, WARNING, and HEALTHY states based on degradation trajectories.Automated Anomaly Detection: Flags sensor drift exceeding $\pm 2.5\sigma$ from historical baseline averages.Interactive Decision Support: Serves real-time telemetry metrics via a high-performance interactive Streamlit application.🛠️ System Architecture & Methodology+--------------------------+       +---------------------------+       +------------------------------+
+| NASA C-MAPSS Sensor Data |  -->  | Feature Engineering &     |  -->  | Interactive Executive        |
+| (21 Telemetry Channels)  |       | Rolling Z-Score Analytics |       | Streamlit Dashboard          |
++--------------------------+       +---------------------------+       +------------------------------+
+Telemetry Processing Pipeline:Parsed high-frequency time-series datasets representing multi-sensor engine operational cycles.Derived exact Remaining Useful Life (RUL) per asset by identifying engine end-of-life (EOL) cycles.Statistical Anomaly Engine:Computed 10-cycle rolling averages across sensitive temperature metrics (sensor_11).Transformed raw signals into normalized Z-scores ($Z = \frac{X - \mu}{\sigma}$) to detect sudden degradation anomalies while filtering high-frequency operational noise.Interactive UI / UX:Built responsive dashboard architecture using Streamlit, featuring executive KPI cards, fleet filtering sidebars, and dual-axis signal visualization charts.🚀 Key FeaturesReal-time KPI Metrics: Instant visibility into Current Cycle, RUL, Health Status, and Cumulative Anomaly Counts.Fleet Asset Selection: Seamlessly pivot across 100+ simulated engine units to inspect individual health trajectories.Signal Degradation Profile: Visual representation comparing smoothed sensor averages against Z-score anomaly bounds.💻 Tech StackLanguage: Python 3.11+Dashboarding & UI: StreamlitData Processing: Pandas, NumPyStatistical Modeling: SciPy, StatsmodelsData Visualization: Matplotlib, Seaborn📦 Quick Start & SetupPrerequisitesPython 3.10 or higherGitInstallationClone the repository:git clone https://github.com/YOUR_USERNAME/fleet-analytics-dashboard.git
+cd fleet-analytics-dashboard
+Install dependencies:pip install pandas numpy scipy matplotlib seaborn streamlit
+Run the Streamlit application:python -m streamlit run app.py
+Open your browser at http://localhost:8501.📂 Project Structurefleet-analytics-dashboard/
+├── app.py                # Main Streamlit dashboard script
+├── train_FD001.txt       # NASA C-MAPSS Turbofan Engine degradation dataset
+├── README.md             # Technical documentation & project brief
+✉️ Author & ContactDeveloper: Arunava BiswasFocus: Data Analytics, Machine Learning Engineering, & Predictive MaintenanceLinkedIn: Connect on LinkedInGitHub: GitHub Profile
+>>>>>>> cd39c69e181a0facfdf7ef95fb1d12f92cf09637
